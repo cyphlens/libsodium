@@ -1,0 +1,2 @@
+# libsodium
+Cocoapods for libsodium
