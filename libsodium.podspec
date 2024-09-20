@@ -19,11 +19,11 @@ Pod::Spec.new do |s|
 
   s.description      = 'Sodium is a modern, easy-to-use software library for encryption, decryption, signatures, password hashing, and more copy of 1.0.20'
 
-  s.homepage         = 'https://github.com/alexinx/libsodium'
+  s.homepage         = 'https://github.com/cyphlens/libsodium'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'alexinx' => 'alexappadurai.swamydhas@ionixxtech.com' }
-  s.source           = { :git => 'https://github.com/alexinx/libsodium.git', :tag => s.version.to_s }
+  s.author           = { 'cyphlens' => 'andrea@cyphlens.com' }
+  s.source           = { :git => 'https://github.com/cyphlens/libsodium.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '13.0'
