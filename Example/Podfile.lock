@@ -1,0 +1,16 @@
+PODS:
+  - libsodium (1.0.20)
+
+DEPENDENCIES:
+  - libsodium (from `../`)
+
+EXTERNAL SOURCES:
+  libsodium:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  libsodium: 5f8613638941dcb3cf8e8acb5a6c6ad231706419
+
+PODFILE CHECKSUM: 872e60034b47c0e9b37d9415e6a0a8c31d84d7b9
+
+COCOAPODS: 1.15.2

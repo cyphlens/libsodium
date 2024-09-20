@@ -1,0 +1,6 @@
+use_frameworks!
+target 'libsodium_Tests' do
+  pod 'libsodium', :path => '../'
+  
+  
+end

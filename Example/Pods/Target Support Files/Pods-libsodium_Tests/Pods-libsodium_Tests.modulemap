@@ -1,0 +1,6 @@
+framework module Pods_libsodium_Tests {
+  umbrella header "Pods-libsodium_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,25 @@
+{
+  "name": "libsodium",
+  "version": "1.0.20",
+  "summary": "Libsodium, also known as Sodium, is a powerful cryptography library",
+  "description": "Sodium is a modern, easy-to-use software library for encryption, decryption, signatures, password hashing, and more copy of 1.0.20",
+  "homepage": "https://github.com/alexinx/libsodium",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "24449613": "alexappadurai.swamydhas@ionixxtech.com"
+  },
+  "source": {
+    "git": "https://github.com/24449613/libsodium.git",
+    "tag": "1.0.20"
+  },
+  "platforms": {
+    "ios": "13.0"
+  },
+  "source_files": "libsodium/Classes/**/*",
+  "project_header_files": [
+    "libsodium/Classes/*.h"
+  ]
+}
