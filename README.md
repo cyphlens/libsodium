@@ -17,7 +17,7 @@ libsodium is available through [CocoaPods](https://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
-  pod 'libsodium', :git => 'https://github.com/alexinx/libsodium.git', :tag => '1.0.20'
+  pod 'libsodium', :git => 'https://github.com/cyphlens/libsodium.git', :tag => '1.0.20'
 ```
 
 ## Author
