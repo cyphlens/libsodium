@@ -22,7 +22,7 @@ it, simply add the following line to your Podfile:
 
 ## Author
 
-24449613, alexappadurai.swamydhas@ionixxtech.com
+andrea, andrea@cyphlens.com
 
 ## License
 
