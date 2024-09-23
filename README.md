@@ -1,4 +1,7 @@
-# libsodium
+# Libsodium
+
+Please refer to the Libsodium official page for latest code, license and release notes.
+[Official libsodium Github page](https://github.com/jedisct1/libsodium).
 
 ## Example
 
@@ -6,19 +9,17 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## Requirements
 
+Make sure to have installed [CocoaPods](https://cocoapods.org).
+
 ## Installation
 
-libsodium is available through [CocoaPods](https://cocoapods.org). To install
+We made Libsodium available through [CocoaPods](https://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
   pod 'libsodium', :git => 'https://github.com/cyphlens/libsodium.git', :tag => '1.0.20'
 ```
 
-## Author
-
-andrea, andrea@cyphlens.com
-
 ## License
 
-libsodium is available under the Cyphlens LLC license. See the LICENSE file for more info.
+Libsodium is available under the ISC license as described on their [Github page](https://github.com/jedisct1/libsodium).
