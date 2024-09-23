@@ -1,10 +1,5 @@
 # libsodium
 
-[![CI Status](https://img.shields.io/travis/24449613/libsodium.svg?style=flat)](https://travis-ci.org/24449613/libsodium)
-[![Version](https://img.shields.io/cocoapods/v/libsodium.svg?style=flat)](https://cocoapods.org/pods/libsodium)
-[![License](https://img.shields.io/cocoapods/l/libsodium.svg?style=flat)](https://cocoapods.org/pods/libsodium)
-[![Platform](https://img.shields.io/cocoapods/p/libsodium.svg?style=flat)](https://cocoapods.org/pods/libsodium)
-
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
@@ -26,4 +21,4 @@ andrea, andrea@cyphlens.com
 
 ## License
 
-libsodium is available under the MIT license. See the LICENSE file for more info.
+libsodium is available under the Cyphlens LLC license. See the LICENSE file for more info.
