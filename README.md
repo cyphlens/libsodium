@@ -13,6 +13,30 @@ Make sure to have installed [CocoaPods](https://cocoapods.org).
 
 ## Installation
 
+### Swift Package Manager
+
+Add libsodium to your project in Xcode via **File → Add Package Dependencies…** and enter:
+
+```
+https://github.com/cyphlens/libsodium.git
+```
+
+Or add this to your `Package.swift`:
+
+```swift
+dependencies: [
+    .package(url: "https://github.com/cyphlens/libsodium.git", from: "1.0.20"),
+],
+targets: [
+    .target(
+        name: "YourTarget",
+        dependencies: ["libsodium"]
+    ),
+]
+```
+
+### CocoaPods
+
 We made Libsodium available through [CocoaPods](https://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
