@@ -35,6 +35,17 @@ targets: [
 ]
 ```
 
+**Using from C or Objective-C:** Add the `libsodium` library to your target’s **Frameworks, Libraries, and Embedded Content**. Then in C:
+
+```c
+#include <sodium.h>
+
+// Optional: use module import in Objective-C
+// #import <libsodium/sodium.h>
+```
+
+If you see **'sodium.h' file not found**, ensure your target actually links the `libsodium` product (Xcode: target → General → Frameworks, Libraries, and Embedded Content → + → libsodium). The header search path is set automatically when the dependency is linked.
+
 ### CocoaPods
 
 We made Libsodium available through [CocoaPods](https://cocoapods.org). To install
