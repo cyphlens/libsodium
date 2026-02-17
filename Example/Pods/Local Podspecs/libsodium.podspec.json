@@ -3,23 +3,29 @@
   "version": "1.0.20",
   "summary": "Libsodium, also known as Sodium, is a powerful cryptography library",
   "description": "Sodium is a modern, easy-to-use software library for encryption, decryption, signatures, password hashing, and more copy of 1.0.20",
-  "homepage": "https://github.com/alexinx/libsodium",
+  "homepage": "https://github.com/cyphlens/libsodium",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
   },
   "authors": {
-    "24449613": "alexappadurai.swamydhas@ionixxtech.com"
+    "cyphlens": "andrea@cyphlens.com"
   },
   "source": {
-    "git": "https://github.com/24449613/libsodium.git",
+    "git": "https://github.com/cyphlens/libsodium.git",
     "tag": "1.0.20"
   },
   "platforms": {
     "ios": "13.0"
   },
-  "source_files": "libsodium/Classes/**/*",
-  "project_header_files": [
-    "libsodium/Classes/*.h"
-  ]
+  "source_files": "Sources/Classes/**/*.{c,h}",
+  "public_header_files": "Sources/Classes/include/sodium/**/*.{h}",
+  "requires_arc": false,
+  "pod_target_xcconfig": {
+    "HEADER_SEARCH_PATHS": " \"$(PODS_TARGET_SRCROOT)/Sources/Classes/include/sodium\" \"$(PODS_TARGET_SRCROOT)/Sources/Classes/include\" \"$(PODS_TARGET_SRCROOT)/Sources/Classes/include/sodium/private\" ",
+    "OTHER_LDFLAGS": "-DNATIVE_LITTLE_ENDIAN=1 -DHAVE_MADVISE -DHAVE_MMAP -DHAVE_MPROTECT -DHAVE_POSIX_MEMALIGN -DHAVE_WEAK_SYMBOLS"
+  },
+  "xcconfig": {
+    "HEADER_SEARCH_PATHS": " \"$(PODS_ROOT)/libsodium/Sources/Classes/include/sodium\" \"$(PODS_ROOT)/libsodium/Sources/Classes/include\" \"$(PODS_ROOT)/libsodium/Sources/Classes/include/sodium/private\" "
+  }
 }
