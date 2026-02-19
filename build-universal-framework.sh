@@ -63,6 +63,19 @@ fi
 # Copy the entire framework
 ditto "${FRAMEWORK_PATH}" "${OUTPUT_DIR}/iphoneos/${FRAMEWORK_NAME}.framework"
 
+# Create sodium.h as the primary umbrella header with correct include paths
+# Framework headers are flat, so remove "sodium/" prefix from includes
+sed 's|"sodium/|"|g' "${SCRIPT_DIR}/Sources/Classes/include/sodium.h" > "${OUTPUT_DIR}/iphoneos/${FRAMEWORK_NAME}.framework/Headers/sodium.h"
+
+# Update module map to use sodium.h as umbrella header
+cat > "${OUTPUT_DIR}/iphoneos/${FRAMEWORK_NAME}.framework/Modules/module.modulemap" << EOF
+framework module libsodium {
+    umbrella header "sodium.h"
+    export *
+    module * { export * }
+}
+EOF
+
 rm -rf "${DERIVED_DATA_PATH}"
 echo "   ✅ iOS framework built successfully"
 
@@ -93,6 +106,19 @@ fi
 
 # Copy the entire framework
 ditto "${FRAMEWORK_PATH}" "${OUTPUT_DIR}/iphonesimulator/${FRAMEWORK_NAME}.framework"
+
+# Create sodium.h as the primary umbrella header with correct include paths
+# Framework headers are flat, so remove "sodium/" prefix from includes
+sed 's|"sodium/|"|g' "${SCRIPT_DIR}/Sources/Classes/include/sodium.h" > "${OUTPUT_DIR}/iphonesimulator/${FRAMEWORK_NAME}.framework/Headers/sodium.h"
+
+# Update module map to use sodium.h as umbrella header
+cat > "${OUTPUT_DIR}/iphonesimulator/${FRAMEWORK_NAME}.framework/Modules/module.modulemap" << EOF
+framework module libsodium {
+    umbrella header "sodium.h"
+    export *
+    module * { export * }
+}
+EOF
 
 rm -rf "${DERIVED_DATA_PATH}"
 echo "   ✅ iOS Simulator framework built successfully"
