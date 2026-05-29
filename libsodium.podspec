@@ -35,9 +35,11 @@ Pod::Spec.new do |s|
   # s.header_mappings_dir = 'libsodium/Classes/include'
   s.requires_arc = false
 
-  s.ios.xcconfig      = {  "OTHER_LDFLAGS" => "-DNATIVE_LITTLE_ENDIAN=1 -DHAVE_MADVISE -DHAVE_MMAP -DHAVE_MPROTECT -DHAVE_POSIX_MEMALIGN -DHAVE_WEAK_SYMBOLS"
-                         }
-  s.xcconfig = { 'HEADER_SEARCH_PATHS' => ' "$(PODS_ROOT)/libsodium/Sources/Classes/include/sodium" "$(PODS_ROOT)/libsodium/Sources/Classes/include" ' }
+  s.pod_target_xcconfig = { 
+    'HEADER_SEARCH_PATHS' => ' "$(PODS_TARGET_SRCROOT)/Sources/Classes/include/sodium" "$(PODS_TARGET_SRCROOT)/Sources/Classes/include" "$(PODS_TARGET_SRCROOT)/Sources/Classes/include/sodium/private" ',
+    'OTHER_LDFLAGS' => '-DNATIVE_LITTLE_ENDIAN=1 -DHAVE_MADVISE -DHAVE_MMAP -DHAVE_MPROTECT -DHAVE_POSIX_MEMALIGN -DHAVE_WEAK_SYMBOLS'
+  }
+  s.xcconfig = { 'HEADER_SEARCH_PATHS' => ' "$(PODS_ROOT)/libsodium/Sources/Classes/include/sodium" "$(PODS_ROOT)/libsodium/Sources/Classes/include" "$(PODS_ROOT)/libsodium/Sources/Classes/include/sodium/private" ' }
 
 
 end
